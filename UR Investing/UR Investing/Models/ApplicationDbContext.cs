@@ -14,5 +14,7 @@ namespace UR_Investing.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<UR_Investing.Models.Member> Members { get; set; }
     }
 }

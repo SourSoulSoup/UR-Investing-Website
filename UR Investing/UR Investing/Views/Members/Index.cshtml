@@ -1,0 +1,51 @@
+﻿@model IEnumerable<UR_Investing.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.picturePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.biography)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resumePath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.picturePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.biography)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resumePath)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

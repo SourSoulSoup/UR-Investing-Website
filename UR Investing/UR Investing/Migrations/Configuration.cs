@@ -10,7 +10,6 @@ namespace UR_Investing.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "UR_Investing.Models.ApplicationDbContext";
         }
 
         protected override void Seed(UR_Investing.Models.ApplicationDbContext context)

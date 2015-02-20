@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Admin Control Panel";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>
+    @Html.ActionLink("Front Page", "Admin", "Home")
+    @Html.ActionLink("Carousel", "Admin", "Carousel")
+</h3>
+<h3>
+    @Html.ActionLink("Members", "Admin", "Members")
+</h3>
+<h3>
+    @Html.ActionLink("Teams", "Admin", "Teams")
+</h3>
+<h3>
+    @Html.ActionLink("Positions", "Admin", "Positions")
+</h3>
+<h3>
+    @Html.ActionLink("Contact Information", "Admin", "Contact")
+</h3>
+

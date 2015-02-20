@@ -50,6 +50,6 @@ E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Secu
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Google.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Twitter.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\obj\Debug\UR Investing.csprojResolveAssemblyReference.cache
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\obj\Debug\UR Investing.dll
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\obj\Debug\UR Investing.pdb
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\obj\Debug\UR Investing.csprojResolveAssemblyReference.cache

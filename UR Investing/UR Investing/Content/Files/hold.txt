@@ -1,0 +1,55 @@
+﻿<div class="row">
+    <div id="front-page-carousel" class="carousel slide" data-ride="carousel">
+        @*
+            TODO:
+            Create model for each carousel item and write code to insert them
+        *@
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#front-page-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#front-page-carousel" data-slide-to="1"></li>
+            <li data-target="#front-page-carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item carousel-image active">
+                <img src="~/Content/Files/FrontSplash1.jpg" alt="Image1">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Caption1</h3>
+                        <p>Some text under it</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item carousel-image">
+                <img src="~/Content/Files/FrontSplash2.jpg" alt="Image2">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Caption2</h3>
+                        <p>Some text under it</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item carousel-image">
+                <img src="~/Content/Files/FrontSplash3.jpg" alt="Image3">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Caption3</h3>
+                        <p >Some text under it</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#front-page-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#front-page-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

@@ -1,48 +1,55 @@
-﻿@{
+﻿@model UR_Investing.Models.HomePage
+@{
     ViewBag.Title = "Home";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<img class="hidden-sm hidden-md hidden-lg max-width center-block" src="~/Content/Files/Brand.jpg" />
+
+@Html.Partial("_IndexCarousel");}
 
 <div class="row">
-    <div class="col-md-3">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class=" col-sm-8 col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Main Title</h2>
+                <p>
+                    Main body text
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <h3>Column 1 Title</h3>
+                <p>
+                    Body of first column
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>Column 2 Title</h3>
+                <p>
+                    Body of second column
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>Column 3 Title</h3>
+                <p>
+                    Body of third column
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-3">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-3">
+    
+    <div class="col-sm-4 col-xs-12">
         <h2>Media</h2>
-        <div>
-            <a class="twitter-timeline" height="400" data-dnt="true" href="https://twitter.com/UR_Investing" data-widget-id="537803750925029378">Tweets by @@UR_Investing</a>
+        <div id="twitter">
+            <a class="twitter-timeline" height="400" width="100%" data-dnt="true" href="https://twitter.com/UR_Investing" data-widget-id="537803750925029378">Tweets by @@UR_Investing</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
-        <div>
+        <div cid="facebook">
             <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FurInvesting&width=600&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=435" scrolling="yes" frameborder="0" style="border:none; overflow:hidden; width:100%; height:430px; background: white; float:left; " allowtransparency="true"></iframe>
         </div>
     </div>
-</div>
-
-<div>
-@for (int i = 0; i < 50; i++)
-{
-    @i <br />
-}
 </div>

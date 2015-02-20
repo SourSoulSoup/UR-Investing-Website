@@ -15,6 +15,10 @@ namespace UR_Investing.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<UR_Investing.Models.Member> Members { get; set; }
+        public System.Data.Entity.DbSet<UR_Investing.Models.Member> Members { get; set;} 
+
+        public System.Data.Entity.DbSet<UR_Investing.Models.Team> Teams { get; set; }
+
+        public System.Data.Entity.DbSet<UR_Investing.Models.Position> Positions { get; set; }
     }
 }

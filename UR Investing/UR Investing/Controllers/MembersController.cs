@@ -10,14 +10,24 @@ using UR_Investing.Models;
 
 namespace UR_Investing.Controllers
 {
+    [Authorize]
     public class MembersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Members
+        [AllowAnonymous]
         public ActionResult Index()
         {
-            return View(db.Members.ToList());
+            var members = db.Members.Include(m => m.Position).Include(m => m.Team);
+            return View(members.ToList());
+        }
+
+        // GET: Members/Admin
+        public ActionResult Admin()
+        {
+            var members = db.Members.Include(m => m.Position).Include(m => m.Team);
+            return View(members.ToList());
         }
 
         // GET: Members/Details/5
@@ -38,6 +48,8 @@ namespace UR_Investing.Controllers
         // GET: Members/Create
         public ActionResult Create()
         {
+            ViewBag.positionName = new SelectList(db.Positions, "name", "name");
+            ViewBag.teamName = new SelectList(db.Teams, "name", "name");
             return View();
         }
 
@@ -46,7 +58,7 @@ namespace UR_Investing.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,name,picturePath,biography,resumePath")] Member member)
+        public ActionResult Create([Bind(Include = "ID,name,picturePath,biography,teamName,positionName")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +67,8 @@ namespace UR_Investing.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.positionName = new SelectList(db.Positions, "name", "description", member.positionName);
+            ViewBag.teamName = new SelectList(db.Teams, "name", "description", member.teamName);
             return View(member);
         }
 
@@ -70,6 +84,8 @@ namespace UR_Investing.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.positionName = new SelectList(db.Positions, "name", "description", member.positionName);
+            ViewBag.teamName = new SelectList(db.Teams, "name", "description", member.teamName);
             return View(member);
         }
 
@@ -78,7 +94,7 @@ namespace UR_Investing.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,name,picturePath,biography,resumePath")] Member member)
+        public ActionResult Edit([Bind(Include = "ID,name,picturePath,biography,teamName,positionName")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +102,8 @@ namespace UR_Investing.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.positionName = new SelectList(db.Positions, "name", "description", member.positionName);
+            ViewBag.teamName = new SelectList(db.Teams, "name", "description", member.teamName);
             return View(member);
         }
 

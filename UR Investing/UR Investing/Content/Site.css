@@ -1,12 +1,15 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: #EBF0F5;
+    min-height:90vh;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -18,7 +21,56 @@
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
-select,
-textarea {
+select
+{
     max-width: 280px;
 }
+textarea {
+    resize:none;
+}
+.max-width {
+    max-width:100%;
+}
+
+
+@media (max-width: 991px) {
+    .carousel {
+        max-height: 350px;
+    }
+    .carousel-inner > .item > img {
+        margin: 0 auto;
+        max-height: 350px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .carousel {
+        max-height: 450px;
+    }
+    .carousel-inner > .item > img {
+        margin: 0 auto;
+        max-height: 450px;
+    }
+}
+
+.carousel-caption > a {
+    color:#fff;
+}
+
+.icon-bar {
+    background-color: white;
+}
+
+.navbar-toggle {
+    background-color: black;
+}
+
+.navbar-nav > li > a {
+    color:black;
+}
+
+.navbar {
+    background-color:#337ab7;
+}
+

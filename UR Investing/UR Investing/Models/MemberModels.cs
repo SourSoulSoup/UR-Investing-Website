@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web;
 using System.Web.Mvc;
 
 namespace UR_Investing.Models
@@ -14,9 +15,11 @@ namespace UR_Investing.Models
         [Display(Name = "Name")]
         public string name { get; set; }
 
+        [Display(Name = "Picture")]
         [FileExtensions(ErrorMessage = "Please enter a valid file name with the extension \".png, .jpg, .jpeg, or .gif\"", Extensions = ".png,.jpg,.jpeg,.gif")]
         public string picturePath { get; set; }
 
+       
         [Display(Name = "Biography")]
         [DataType(DataType.MultilineText)]
         public string biography { get; set; }

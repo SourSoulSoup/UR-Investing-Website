@@ -139,7 +139,7 @@ namespace UR_Investing.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+        [AllowAnonymous] //No need for registration
         public ActionResult Register()
         {
             return View();
@@ -148,7 +148,7 @@ namespace UR_Investing.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
+        [AllowAnonymous] //No need for registration
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {

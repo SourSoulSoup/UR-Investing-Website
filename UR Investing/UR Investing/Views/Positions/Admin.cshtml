@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Hitchhikers.Models.Position>
+﻿@model IEnumerable<UR_Investing.Models.Position>
 
 @{
     ViewBag.Title = "Index";
@@ -36,7 +36,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.name }) |
-            @Html.ActionLink("Details", "Details", new { id=item.name }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.name })
         </td>
     </tr>

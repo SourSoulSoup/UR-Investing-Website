@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="urinvesting" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\GitHub\\UR-Investing-Website\\UR\ Investing\\UR\ Investing\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\GitHub\\UR-Investing-Website\\UR\ Investing\\UR\ Investing\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="urinvesting/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\GitHub\\UR-Investing-Website\\UR\ Investing\\UR\ Investing\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:uzy8mfplki.database.windows.net,1433;Initial Catalog=ur_investing;User ID=ur_investing@uzy8mfplki;Password=QRwe14@#" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\GitHub\\UR-Investing-Website\\UR\ Investing\\UR\ Investing\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

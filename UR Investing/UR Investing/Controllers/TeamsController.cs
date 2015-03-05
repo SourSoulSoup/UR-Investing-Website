@@ -25,7 +25,7 @@ namespace UR_Investing.Controllers
         // GET: Teams/Admin
         public ActionResult Admin()
         {
-            return View(db.Teams.ToList());
+            return View(db.Teams.OrderByDescending(s => s.rank).ToList());
         }
 
         // GET: Teams/Details/5
@@ -60,7 +60,7 @@ namespace UR_Investing.Controllers
             {
                 db.Teams.Add(team);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Admin");
             }
 
             return View(team);
@@ -92,7 +92,7 @@ namespace UR_Investing.Controllers
             {
                 db.Entry(team).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Admin");
             }
             return View(team);
         }
@@ -120,7 +120,7 @@ namespace UR_Investing.Controllers
             Team team = db.Teams.Find(id);
             db.Teams.Remove(team);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Admin");
         }
 
         [HttpPost]

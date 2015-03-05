@@ -1,7 +1,8 @@
-﻿@model IEnumerable<Hitchhikers.Models.Team>
+﻿@model IEnumerable<UR_Investing.Models.Team>
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -11,6 +12,9 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.description)
         </th>
@@ -23,6 +27,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.description)
         </td>
         <td>
@@ -30,7 +37,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.name }) |
-            @Html.ActionLink("Details", "Details", new { id=item.name }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.name })
         </td>
     </tr>

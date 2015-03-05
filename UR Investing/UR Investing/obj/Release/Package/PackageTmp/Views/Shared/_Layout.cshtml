@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @{
+        string siteName = "UR Investing";
+    }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @siteName</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Files/favicon.ico" />
+    @Styles.Render("~/Content/css")
+@*
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/dropdown-submenu.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/site.css" />
+*@
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <nav class="container navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> <!-- Drop down menu 3 bar icon -->
+            
+                <div class="navbar-brand">
+                    <!-- UR Investing Logo and navigation link -->
+                    <a href="@Url.Action("Index", "Home")"><img alt="@siteName" src="~/Content/Files/Brand.jpg" class="navbar-brand-image"/></a>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav nav-pills">
+
+                    <!-- Home navigation link-->
+                    <li class=@(ViewBag.currentPage == "Home" ? "active" : "")>@Html.ActionLink("Home", "Index", "Home")</li> 
+
+                    <!-- About navigation link-->
+                    <li class=@(ViewBag.currentPage == "About" ? "active" : "")>@Html.ActionLink("About", "Index", "About")</li>
+
+                    <!-- Member navigation link and dropdowns-->
+                    @*TODO: Make the member dropdown list dynamic*@
+                    <li class="dropdown dropdown-main hidden-xs @(ViewBag.currentPage == "Members" ? "active" : "")">
+                        <a href="@Url.Action("Index","Members")">
+                            Members <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-first multi-level" role="menu" aria-labelledby="dropdownMenu">
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Team 1</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Member 1</a></li>
+                                    <li><a tabindex="-1" href="#">Member 2</a></li>
+                                    <li><a tabindex="-1" href="#">Member 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Team 2</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Member 1</a></li>
+                                    <li><a tabindex="-1" href="#">Member 2</a></li>
+                                    <li><a tabindex="-1" href="#">Member 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Team 3</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Member 1</a></li>
+                                    <li><a tabindex="-1" href="#">Member 2</a></li>
+                                    <li><a tabindex="-1" href="#">Member 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Contact navigation link-->
+                    <li class=@(ViewBag.currentPage == "Contact" ? "active" : "")>@Html.ActionLink("Contact", "Index", "Contact")</li>
+                </ul>
+
+                @Html.Partial("_LoginPartial")
+            </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <div class="navbar navbar-fixed-bottom hidden-xs container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="https://www.facebook.com/urInvesting" target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/UR_Investing" target="_blank">Twitter</a>
+                </li>
+            </ul>
+            <ul >
+                <liclass ="navbar-right">
+                    <p class="navbar-text">&copy; @DateTime.Now.Year - @siteName</p>
+                </liclass>
+            </ul>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/dropzone")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

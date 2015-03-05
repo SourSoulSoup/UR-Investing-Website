@@ -1,51 +1,42 @@
 ﻿@model IEnumerable<UR_Investing.Models.Member>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Members";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Position.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Team.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.biography)
-        </th>
-        <th></th>
-    </tr>
+@foreach (var team in ViewBag.Teams)
+{
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Position.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Team.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.biography)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
+    <h4>@team.name</h4>
+
+    <table class="table table-condensed">
+        <tr>
+            <th class="col-sm-3">Position</th>
+            <th class="col-sm-3">Member</th>
+        </tr>
+    @foreach (var item in Model)
+    {
+        @*TODO: SET IT SO THAT THE PEOPLE'S INFO AND PICTURES ARE SHOWN*@
+        if (item.Team.name == team.name)
+        {
+            <tr>
+                <td class="col-sm-3">
+                    @item.positionName
+                </td>
+                <td class="col-sm-3">
+                    @Html.ActionLink(item.name, "Details", new { id = item.ID })
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        }
+    }
+    </table>
+
 }
 
-</table>
+
+

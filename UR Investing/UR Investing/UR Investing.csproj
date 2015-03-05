@@ -168,8 +168,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CarouselController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -182,6 +184,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Models\ContentModels.cs" />
     <Compile Include="Models\MemberModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -201,6 +204,7 @@
     <Content Include="Content\Files\Brand.jpg" />
     <Content Include="Content\Files\custom.css" />
     <Content Include="Content\Files\Facebook Logo.png" />
+    <Content Include="Content\Files\favicon.ico" />
     <Content Include="Content\Files\FrontSplash1.jpg" />
     <Content Include="Content\Files\FrontSplash2.jpg" />
     <Content Include="Content\Files\FrontSplash3.jpg" />
@@ -216,6 +220,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\urinvesting - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\urinvesting - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\urinvesting.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -247,7 +254,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
@@ -279,11 +286,31 @@
     <Content Include="Views\Members\Edit.cshtml" />
     <Content Include="Views\Members\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Home\_IndexCarousel.cshtml" />
+    <Content Include="Views\Carousel\_IndexCarousel.cshtml" />
+    <Content Include="Views\Shared\_MemberNavPartial.cshtml" />
+    <Content Include="Views\Carousel\Create.cshtml" />
+    <Content Include="Views\Carousel\Delete.cshtml" />
+    <Content Include="Views\Carousel\Details.cshtml" />
+    <Content Include="Views\Carousel\Edit.cshtml" />
+    <Content Include="Views\Carousel\Admin.cshtml" />
+    <Content Include="Views\Members\Admin.cshtml" />
+    <Content Include="Views\Positions\Admin.cshtml" />
+    <Content Include="Views\Positions\Create.cshtml" />
+    <Content Include="Views\Positions\Delete.cshtml" />
+    <Content Include="Views\Positions\Details.cshtml" />
+    <Content Include="Views\Positions\Edit.cshtml" />
+    <Content Include="Views\Positions\Index.cshtml" />
+    <Content Include="Views\Teams\Create.cshtml" />
+    <Content Include="Views\Teams\Delete.cshtml" />
+    <Content Include="Views\Teams\Details.cshtml" />
+    <Content Include="Views\Teams\Edit.cshtml" />
+    <Content Include="Views\Teams\Admin.cshtml" />
+    <Content Include="Views\Home\Photo.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\HttpPostedFileBase.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Positions\" />
-    <Folder Include="Views\Teams\" />
+    <Folder Include="Content\Images\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

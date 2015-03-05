@@ -27,29 +27,29 @@ E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.WebPages
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.WebPages.dll
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.WebPages.Razor.dll
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\WebGrease.dll
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Antlr3.Runtime.pdb
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Cookies.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Facebook.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Google.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.OAuth.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Twitter.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Newtonsoft.Json.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.Helpers.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.Mvc.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.Optimization.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.Razor.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.WebPages.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.WebPages.Deployment.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.WebPages.Razor.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Antlr3.Runtime.pdb
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Newtonsoft.Json.xml
+E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\System.Web.Optimization.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\EntityFramework.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\EntityFramework.SqlServer.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.AspNet.Identity.Core.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.AspNet.Identity.Owin.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Facebook.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Cookies.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.OAuth.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Google.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.Twitter.xml
-E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\obj\Debug\UR Investing.dll
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\obj\Debug\UR Investing.pdb
 E:\GitHub\UR-Investing-Website\UR Investing\UR Investing\obj\Debug\UR Investing.csprojResolveAssemblyReference.cache

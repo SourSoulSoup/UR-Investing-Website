@@ -20,5 +20,7 @@ namespace UR_Investing.Models
         public System.Data.Entity.DbSet<UR_Investing.Models.Team> Teams { get; set; }
 
         public System.Data.Entity.DbSet<UR_Investing.Models.Position> Positions { get; set; }
+
+        public System.Data.Entity.DbSet<UR_Investing.Models.CarouselItems> CarouselItems { get; set; }
     }
 }

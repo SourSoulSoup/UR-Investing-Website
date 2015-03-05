@@ -11,12 +11,7 @@ namespace UR_Investing.Controllers
         // GET: Contact
         public ActionResult Index()
         {
-            return View();
-        }
-
-        // GET: Contact/Create
-        public ActionResult Create()
-        {
+            ViewBag.currentPage = "Contact";
             return View();
         }
 

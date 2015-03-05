@@ -1,0 +1,42 @@
+﻿@model IEnumerable<UR_Investing.Models.Member>
+
+@{
+    ViewBag.Title = "Members";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@foreach (var team in ViewBag.Teams)
+{
+
+    <h4>@team.name</h4>
+
+    <table class="table table-condensed">
+        <tr>
+            <th class="col-sm-3">Position</th>
+            <th class="col-sm-3">Member</th>
+        </tr>
+    @foreach (var item in Model)
+    {
+        @*TODO: SET IT SO THAT THE PEOPLE'S INFO AND PICTURES ARE SHOWN*@
+        if (item.Team.name == team.name)
+        {
+            <tr>
+                <td class="col-sm-3">
+                    @item.positionName
+                </td>
+                <td class="col-sm-3">
+                    @Html.ActionLink(item.name, "Details", new { id = item.ID })
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        }
+    }
+    </table>
+
+}
+
+
+

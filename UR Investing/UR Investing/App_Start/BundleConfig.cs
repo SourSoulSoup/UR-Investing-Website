@@ -29,9 +29,8 @@ namespace UR_Investing
             bundles.Add(new StyleBundle("~/Content/css").Include(
                     "~/Content/bootstrap.css",
                     "~/Content/dropdown-submenu.css",
-                    "~/Content/custom.css",
-                    "~/Content/basic.css",
-                    "~/Content/dropzone.css"));
+                    "~/Content/site.css"
+                    ));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862

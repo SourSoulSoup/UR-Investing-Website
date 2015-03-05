@@ -30,14 +30,28 @@ namespace UR_Investing.Models
 
         public string title { get; set; }
         public string caption { get; set;} 
-        public string filepath { get; set; }
+        public string picturePath { get; set; }
         public int rank { get; set; }
     }
 
     public class Contact
     {
-        public string phoneNumber { get; set; }
+        [Key]
+        [Required]
+        public int ID { get; set; }
+
+        [DataType(DataType.MultilineText)]
         public string address { get; set; }
+
+
+        public string phoneNumber { get; set; }
+
+        public string faxNumber { get; set; }
+
         public string email { get; set; }
+
+        public string facebook { get; set; }
+
+        public string twitter { get; set; }
     }
 }

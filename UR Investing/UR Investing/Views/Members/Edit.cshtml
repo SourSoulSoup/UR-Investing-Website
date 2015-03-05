@@ -4,10 +4,10 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit Member</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -28,9 +28,17 @@
         <div class="form-group">
             @Html.LabelFor(model => model.picturePath, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @*
                 @Html.EditorFor(model => model.picturePath, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.picturePath, "", new { @class = "text-danger" })
-            </div>
+                *@
+                <input type="file" name="picturePath" id="picturePath" class="form-control"/>
+                <span class="field-validation-valid text-danger" id="spanfile"></span>
+                <div>
+                    <br />Current photo: <img class="bioPic" src="@Html.ValueFor(m => m.picturePath)" alt="None" />
+                </div>
+            </div>            
+
         </div>
 
         <div class="form-group">
@@ -42,7 +50,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.teamName, "teamName", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.teamName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("teamName", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.teamName, "", new { @class = "text-danger" })
@@ -50,9 +58,17 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.positionName, "positionName", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.positionName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("positionName", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.positionName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.linkedIn, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.linkedIn, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.positionName, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -66,7 +82,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Admin")
 </div>
 
 @section Scripts {

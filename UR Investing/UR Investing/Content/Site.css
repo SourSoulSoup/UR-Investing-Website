@@ -1,15 +1,17 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: white;
+    padding-bottom: 40px;
+    background-image: url('Files/URI BG Repeat.gif');
+    background-repeat: repeat;
+    background-size: 200px 400px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #EBF0F5;
     min-height:90vh;
+    margin-top: 20px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -65,16 +67,15 @@ textarea {
     background-color: white;
 }
 
+.navbar-fixed-top{
+
+}
 .navbar-toggle {
     background-color: black;
 }
 
 .navbar-nav > li > a {
     color:black;
-}
-
-.navbar {
-    background-color:#337ab7;
 }
 
 .navbar-brand {
@@ -86,11 +87,6 @@ textarea {
     margin-right: 5px;
 }
 
-.navbar-right
-{
-    margin-right: 0;
-}
-
 .dropdown-main:hover .dropdown-first{
     display: block;
 }
@@ -99,7 +95,7 @@ textarea {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #ffd800;
+  background-color: #A1BFC2;
 }
 
 .row > .column {
@@ -110,4 +106,67 @@ textarea {
 .bioPic {
     max-height: 300px;
     max-width: 300px;
+}
+
+.round-top, .carousel .item {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.round-bottom {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.background-dark {
+    background-color:#424456;
+}
+.background-medium {
+    background-color:#438086;
+}
+.background-light {
+    background-color:#A1BFC2;
+}
+.background-white {
+    background-color:white;
+}
+.background-solid {
+    color:#21613B
+}
+.background-black {
+    color:black;
+}
+.color-dark {
+    color:#424456;
+}
+.color-medium{
+    color:#438086;
+}
+.color-light{
+    color:#A1BFC2;
+}
+.color-solid {
+    color:#21613B
+}
+.color-black {
+    color:black;
+}
+.color-white {
+    color:white;
+}
+
+.content-small {
+
+}
+
+.content-medium {
+    padding: 1em;
+}
+
+.margin-none {
+    margin: 0px 0px;
+}
+.content-large {
+
+}
+.border-none {
+    border:none;
 }

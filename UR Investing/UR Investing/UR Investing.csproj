@@ -174,6 +174,7 @@
     <Compile Include="Controllers\CarouselController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\PositionsController.cs" />
@@ -211,6 +212,11 @@
     <Content Include="Content\Files\FrontSplash4.jpg" />
     <Content Include="Content\Files\hold.txt" />
     <Content Include="Content\Files\Twitter Logo.png" />
+    <Content Include="Content\Files\URI BG Repeat.gif" />
+    <Content Include="Content\Files\URI Tranparent Angle Thumbnail Half Opaque.gif" />
+    <Content Include="Content\Files\URI Tranparent Angle Thumbnail.gif" />
+    <Content Include="Content\Files\URI Tranparent Logo.gif" />
+    <Content Include="Content\Files\URI Tranparent Thumbnail.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -287,7 +293,7 @@
     <Content Include="Views\Members\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Carousel\_IndexCarousel.cshtml" />
-    <Content Include="Views\Shared\_MemberNavPartial.cshtml" />
+    <Content Include="Views\Shared\_MemberList.cshtml" />
     <Content Include="Views\Carousel\Create.cshtml" />
     <Content Include="Views\Carousel\Delete.cshtml" />
     <Content Include="Views\Carousel\Details.cshtml" />
@@ -311,6 +317,7 @@
   <ItemGroup>
     <Folder Include="Content\Images\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\Layout\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

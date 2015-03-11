@@ -26,14 +26,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> <!-- Drop down menu 3 bar icon -->
-
+                
+                <!-- UR Investing Logo and navigation link -->
                 <div class="navbar-brand">
-                    <!-- UR Investing Logo and navigation link -->
                     <a href="@Url.Action("Index", "Home")"><img alt="@siteName" src="~/Content/Files/Brand.jpg" class="navbar-brand-image" /></a>
                 </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav nav-pills">
+
+            <!-- Top Navigation Bar-->
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav nav-pills nav-stacked">
 
                     <!-- Home navigation link-->
                     <li class=@(ViewBag.currentPage == "Home" ? "active" : "")>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -43,39 +45,24 @@
 
                     <!-- Member navigation link and dropdowns-->
                     @*TODO: Make the member dropdown list dynamic*@
-                    <li class="dropdown dropdown-main hidden-xs @(ViewBag.currentPage == "Members" ? "active" : "")">
+                    <li class="dropdown dropdown-main @(ViewBag.currentPage == "Members" ? "active" : "")">
                         <a href="@Url.Action("Index","Members")">
-                            Members <span class="caret"></span>
+                            Members <span class="caret hidden-xs"></span>
                         </a>
-                        <ul class="dropdown-menu dropdown-first multi-level" role="menu" aria-labelledby="dropdownMenu">
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Team 1</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#">Member 1</a></li>
-                                    <li><a tabindex="-1" href="#">Member 2</a></li>
-                                    <li><a tabindex="-1" href="#">Member 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Team 2</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#">Member 1</a></li>
-                                    <li><a tabindex="-1" href="#">Member 2</a></li>
-                                    <li><a tabindex="-1" href="#">Member 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Team 3</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#">Member 1</a></li>
-                                    <li><a tabindex="-1" href="#">Member 2</a></li>
-                                    <li><a tabindex="-1" href="#">Member 3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <div class="hidden-xs">
+                            @{
+                                Html.RenderAction("MemberList", "Layout");
+                            }
+                        </div>
                     </li>
+
                     <!-- Contact navigation link-->
                     <li class=@(ViewBag.currentPage == "Contact" ? "active" : "")>@Html.ActionLink("Contact", "Index", "Contact")</li>
+
+                    <li class="visible-xs"><a>xs</a></li>
+                    <li class="visible-sm"><a>sm</a></li>
+                    <li class="visible-md"><a>md</a></li>
+                    <li class="visible-lg"><a>lg</a></li>
                 </ul>
 
                 @Html.Partial("_LoginPartial")
@@ -83,25 +70,30 @@
         </div>
     </nav>
 
-    <div class="container body-content background-white round-top">
-        @RenderBody()
+    <div class="container-fluid ">
+        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 body-content background-white round-top">
+            @RenderBody()
+        </div>
     </div>
-
-    <div class="navbar container background-dark round-bottom">
-        <ul class="nav navbar-nav">
-            <li>
-                <a href="https://www.facebook.com/urInvesting" target="_blank">Facebook</a>
-            </li>
-            <li>
-                <a href="https://twitter.com/UR_Investing" target="_blank">Twitter</a>
-            </li>
-        </ul>
-        <ul class="nav nabar-nav navbar-right">
-            <li>
-                <p class="navbar-text">&copy; @DateTime.Now.Year - @siteName</p>
-            </li>
-        </ul>
+    
+    <div class="container-fluid">
+        <div class="navbar background-dark round-bottom col-md-8 col-md-offset-2">
+            <ul class="navbar-nav nav nav-pills nav-stacked">
+                <li>
+                    <a href="https://www.facebook.com/urInvesting" target="_blank"><img src="~/Content/Files/Facebook Logo.png" style="max-height:20px;" /></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/UR_Investing" target="_blank"><img src="~/Content/Files/Twitter Logo.png" style="max-height:20px;" /></a>
+                </li>
+            </ul>
+            <ul>
+                <li class="nav nabar-nav navbar-right">
+                    <p class="navbar-text color-light">&copy; @DateTime.Now.Year - @siteName</p>
+                </li>
+            </ul>
+        </div>
     </div>
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/dropzone")

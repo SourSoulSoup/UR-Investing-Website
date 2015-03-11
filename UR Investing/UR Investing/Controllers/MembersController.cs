@@ -37,16 +37,17 @@ namespace UR_Investing.Controllers
         // GET: Members/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.currentPage = "Members";
             if (id == null)
             {
                 //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                RedirectToAction("Admin");
+                RedirectToAction("Index");
             }
             Member member = db.Members.Find(id);
             if (member == null)
             {
                 //return HttpNotFound();
-                RedirectToAction("Admin");
+                RedirectToAction("Index");
             }
             return View(member);
         }

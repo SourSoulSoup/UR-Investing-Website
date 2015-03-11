@@ -122,7 +122,7 @@ function WBIHorizontalTicker(a) {
         }
     };
     this.getTableHeader = function () {
-        var b = b = '<span style="margin-right:5px;color:white;font-style:bold;">' + this.getListHeader() + ", powered by TC2000.com</span>";
+        var b = b = '<span style="margin-right:5px;color:white;font-style:bold;">' + this.getListHeader() + ", powered by TC2000.com THIS MY SHIT</span>";
         return b
     };
     this.getTableFooder = function () {
@@ -131,15 +131,15 @@ function WBIHorizontalTicker(a) {
         var b = "";
         return b
     };
-    this.getSymbolDiv = function (b) {
-        var e = b.n.replace(".", "_");
+    this.getSymbolDiv = function (symbol) {
+        var e = symbol.n.replace(".", "_");
         e = e.replace("/", "_");
-        var d = '<span class="WLSymbolItem" id="' + e + '_display"><a class="sym" target="_parent" href="http://www.freestockcharts.com/?Symbol=' + b.n + '&source=TickerWidget">';
+        var d = '<span class="WLSymbolItem" id="' + e + '_display"><a class="sym" target="_parent" href="http://www.freestockcharts.com/?Symbol=' + symbol.n + '&source=TickerWidget">';
         var c = "http://widgets.freestockcharts.com/WidgetServer/images/greenup.png";
-        if (b.v1.substr(0, 1) == "-") {
+        if (symbol.v1.substr(0, 1) == "-") {
             c = "http://widgets.freestockcharts.com/WidgetServer/images/reddown.png"
         }
-        d += b.n + ' <span style="padding-left:3px;margin-right:3px;color:silver;" class="quoteup" id="' + e + '_quote">' + b.v2 + '</span><span style="height:100%;" class="dirup" id="' + e + '_dir"><img alt="" border="0" id="' + e + '_img" src="' + c + '" /></span><span class="quoteup" id="' + e + '_change">' + b.v1 + "</span>";
+        d += symbol.n + ' <span style="padding-left:3px;margin-right:3px;color:silver;" class="quoteup" id="' + e + '_quote">' + symbol.v2 + '</span><span style="height:100%;" class="dirup" id="' + e + '_dir"><img alt="" border="0" id="' + e + '_img" src="' + c + '" /></span><span class="quoteup" id="' + e + '_change">' + symbol.v1 + "</span>";
         d += "</a></span>";
         return d
     };
@@ -233,14 +233,14 @@ function WBIHorizontalTicker(a) {
             $(j).removeClass("changedown");
             $(m).removeClass("dirdown");
             $(m).addClass("dirup");
-            $(n).attr("src", "http://widgets.freestockcharts.com/WidgetServer/images/greenup.png")
+            $(n).attr("src", "~/Content/Files/greenup.png")
         } else {
             $(h).removeClass("changeup");
             $(h).addClass("changedown");
             $(j).removeClass("changeup");
             $(m).removeClass("dirup");
             $(m).addClass("dirdown");
-            $(n).attr("src", "http://widgets.freestockcharts.com/WidgetServer/images/reddown.png")
+            $(n).attr("src", "~/Content/Files/reddown.png")
         }
     }
 };

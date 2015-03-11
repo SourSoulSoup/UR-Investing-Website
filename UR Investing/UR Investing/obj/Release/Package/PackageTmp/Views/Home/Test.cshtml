@@ -1,0 +1,69 @@
+﻿@model UR_Investing.Models.HomePage
+@{
+    ViewBag.Title = "Home";
+}
+<div class="row">
+    <img class="hidden-sm hidden-md hidden-lg max-width center-block" src="~/Content/Files/Brand.jpg" />
+
+    <div class="hidden-xs">
+        @Html.Partial("~/Views/Carousel/_IndexCarousel.cshtml")
+    </div>
+
+</div>
+
+<div class="row">
+    <script src="http://www.macroaxis.com/widgets/fussion.jsp?t=42"></script>
+</div>
+
+<div class="row main-column">
+    <!-- Body Main-->
+    <div class="col-xs-12 col-sm-6 col-sm-offset-1 background-light round-top round-bottom" style="border-top:double; border-bottom:double;">
+        <h2>Main Title</h2>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+    <!--  Body Main End-->
+
+    <!-- Body Columns-->
+    <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+        <!-- Left Column-->
+        <div class="row main-column">
+            <div class="col-xs-12 content-medium">
+                <div class="color-light background-medium round-top round-bottom" style="padding:2em">
+                    <h3 class="color-white">Column Title</h3>
+                    <p>
+                        Body of column<br />
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </p>
+                    <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Column-->
+        <div class="row" style="padding-left:4px; padding-right:4px;">
+            <div class="content-medium round-top round-bottom background-medium color-light">
+                <h3 class="color-white">Column Title</h3>
+                <p>
+                    Body of column<br />
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Body Columns End-->
+</div>
+
+<div class="row" style="background-color:lightgray; border-top:solid 1px">
+    <h2>Media</h2>
+    <div id="twitter" class="col-xs-12 col-sm-6">
+        <a class="twitter-timeline col-xs-12" height="400" data-dnt="true" href="https://twitter.com/UR_Investing" data-widget-id="537803750925029378">Tweets by @@UR_Investing</a>
+        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+    </div>
+    <div cid="facebook" class="col-xs-12 col-sm-6">
+        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FurInvesting&width=600&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=435" scrolling="yes" frameborder="0" style="border:none; overflow:hidden; width:100%; height:430px; background: white; float:left; " allowtransparency="true"></iframe>
+    </div>
+</div>

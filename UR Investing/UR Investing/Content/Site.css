@@ -38,6 +38,9 @@ textarea {
     background-color:black;
 }
 
+/*
+    Small and Extra Small
+*/
 @media (max-width: 991px) {
     .carousel {
         max-height: 350px;
@@ -48,6 +51,9 @@ textarea {
     }
 }
 
+/*
+    Medium and Large
+*/
 @media (min-width: 992px)
 {
     .carousel {
@@ -80,12 +86,26 @@ textarea {
 
 .navbar-brand {
     padding:0px 0px;
+    margin-top: 1px;
 }
 
 .navbar-brand-image {
     max-height: 100%;
     margin-right: 5px;
+    vertical-align:middle;
 }
+
+{
+    margin:1px 1px;
+}
+.nav-stacked > li,
+.nav-stacked > li + li,
+.nav-pills > li,
+.nav-pills > li +li
+{
+    margin: 1px 1px;
+}
+
 
 .dropdown-main:hover .dropdown-first{
     display: block;
@@ -169,4 +189,14 @@ textarea {
 }
 .border-none {
     border:none;
+}
+
+.main-column {
+    padding-bottom:5px;
+}
+
+.carousel {
+    overflow:hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }

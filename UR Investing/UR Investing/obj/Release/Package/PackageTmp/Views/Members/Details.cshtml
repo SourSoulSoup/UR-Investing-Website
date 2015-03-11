@@ -1,14 +1,14 @@
 ﻿@model UR_Investing.Models.Member
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.name;
 }
 
-<h2>Details</h2>
 
-<div>
-    <h3>@Html.DisplayFor(model => model.name)</h3>
-    <h4>@Html.DisplayFor(model => model.Team.name) - @Html.DisplayFor(model => model.Position.name)</h4>
+<div class="col-sm-offset-1 col-sm-10">
+    <h2>@Html.DisplayFor(model => model.name)</h2>
+
+    <h3>@Html.DisplayFor(model => model.Team.name) - @Html.DisplayFor(model => model.Position.name)</h3>
     <hr />
     <img class="bioPic" src="@Html.ValueFor(model => model.picturePath)" />
     @Html.DisplayFor(model => model.biography)

@@ -210,13 +210,16 @@
     <Content Include="Content\Files\FrontSplash2.jpg" />
     <Content Include="Content\Files\FrontSplash3.jpg" />
     <Content Include="Content\Files\FrontSplash4.jpg" />
+    <Content Include="Content\Files\greenup.png" />
     <Content Include="Content\Files\hold.txt" />
+    <Content Include="Content\Files\reddown.png" />
     <Content Include="Content\Files\Twitter Logo.png" />
     <Content Include="Content\Files\URI BG Repeat.gif" />
     <Content Include="Content\Files\URI Tranparent Angle Thumbnail Half Opaque.gif" />
     <Content Include="Content\Files\URI Tranparent Angle Thumbnail.gif" />
     <Content Include="Content\Files\URI Tranparent Logo.gif" />
     <Content Include="Content\Files\URI Tranparent Thumbnail.gif" />
+    <Content Include="Content\ticker.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -313,6 +316,7 @@
     <Content Include="Views\Teams\Admin.cshtml" />
     <Content Include="Views\Home\Photo.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\HttpPostedFileBase.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Images\" />

@@ -16,6 +16,11 @@ namespace UR_Investing.Controllers
             return View();
         }
 
+        public ActionResult Test()
+        {
+            ViewBag.currentPage = "home";
+            return View();
+        }
         public ActionResult Photo()
         {
             ViewBag.currentPage = "Photo";
